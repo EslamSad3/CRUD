@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="mark.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/icons.all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="text-center d-flex justify-content-center align-items-center w-100"
+      >
+        <h2 class="header overflow-hidden my-5">Bookmarker</h2>
+      </div>
+      <div class="breaker my-5"></div>
+      <div
+        class="text-center d-flex justify-content-center align-items-center w-100"
+      >
+        <h3 class="inputs-header">
+          <i class="fa-solid fa-bookmark mark-1"></i
+          ><span class="mx-2 bg-select">Bookmark your favorite sites</span
+          ><i class="fa-solid fa-bookmark mark-2"></i>
+        </h3>
+      </div>
+
+      <!-- Start inputs -->
+
+      <div class="my-3 position-relative">
+        <label for="siteName" class="my-2"
+          ><i class="fa-solid fa-book-bookmark"></i
+          ><span class="mx-2 labelText">Site Name</span></label
+        >
+        <input
+          type="text"
+          id="siteName"
+          class="form-control"
+          placeholder="Bookmark Name"
+        />
+        <div class="validation-correct">
+          <i
+            class="fa-solid fa-check text-success siteName-icon-correct validate-icon d-none"
+          ></i>
+        </div>
+        <div class="validation-error">
+          <i
+            class="fa-solid fa-circle-exclamation text-danger siteName-icon-error validate-icon d-none"
+          ></i>
+        </div>
+      </div>
+      <div class="position-relative">
+        <label for="siteUrl" class="my-2"
+          ><i class="fa-solid fa-link"></i
+          ><span class="mx-2 labelText">Site URL</span></label
+        >
+        <input
+          type="text"
+          id="siteUrl"
+          class="form-control"
+          placeholder="Website Url"
+        />
+        <div class="validation-correct">
+          <i
+            class="fa-solid fa-check text-success siteUrl-icon-correct validate-icon d-none"
+          ></i>
+        </div>
+        <div class="validation-error">
+          <i
+            class="fa-solid fa-circle-exclamation text-danger siteUrl-icon-correct validate-icon d-none"
+          ></i>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center w-100">
+        <button class="btn btn-danger px-5 my-4" id="submit">Submit</button>
+      </div>
+      <div class="breaker my-5"></div>
+
+      <!-- table -->
+
+      <div class="w-100 table-responsive">
+        <table class="table text-center align-middle">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/icons.all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
