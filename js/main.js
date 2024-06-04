@@ -75,4 +75,46 @@ function deleteSite(index) {
   showAllData();
 }
 
+let regexName = /^[a-z]{3,}$/i;
+function validatName() {
+  if (regexName.test(siteName.value)) {
+    if (siteName.classList.contains("is-invalid")) {
+      siteName.classList.remove("is-invalid");
+    }
+    siteName.classList.add("is-valid");
+
+    console.log("match");
+  } else {
+    if (siteName.classList.contains("is-valid")) {
+      siteName.classList.remove("is-valid");
+    }
+    siteName.classList.add("is-invalid");
+    console.log("not match");
+  }
+}
+siteName.addEventListener("keyup", function () {
+  validatName();
+});
+
+var regexUrl = /^(https?:\/\/)?([_a-z-\-]+)\.([a-z]{2,})$/i;
+function validatUrl() {
+  if (regexUrl.test(siteUrl.value)) {
+    if (siteUrl.classList.contains("is-invalid")) {
+      siteUrl.classList.remove("is-invalid");
+    }
+    siteUrl.classList.add("is-valid");
+
+    console.log("match");
+  } else {
+    if (siteUrl.classList.contains("is-valid")) {
+      siteUrl.classList.remove("is-valid");
+    }
+    siteUrl.classList.add("is-invalid");
+    console.log("not match");
+  }
+}
+
+siteUrl.addEventListener("keyup", function () {
+  validatUrl();
+});
 submitBtn.addEventListener("click", addSite);
