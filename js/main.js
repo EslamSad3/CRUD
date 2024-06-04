@@ -2,6 +2,8 @@ var siteName = document.getElementById("siteName");
 var siteUrl = document.getElementById("siteUrl");
 var submitBtn = document.getElementById("submit");
 var tbody = document.getElementById("tbody");
+var layer = document.querySelector(".layer");
+var closeBtn = document.querySelector(".closeBtn");
 var sites = JSON.parse(localStorage.getItem("sites")) || [];
 showAllData();
 
@@ -117,4 +119,22 @@ function validatUrl() {
 siteUrl.addEventListener("keyup", function () {
   validatUrl();
 });
-submitBtn.addEventListener("click", addSite);
+
+closeBtn.addEventListener("click", function () {
+  layer.classList.replace("d-flex", "d-none");
+});
+
+layer.addEventListener("click", function () {
+  layer.classList.replace("d-flex", "d-none");
+});
+
+submitBtn.addEventListener("click", function () {
+  if (
+    siteName.classList.contains("is-invalid") ||
+    siteUrl.classList.contains("is-invalid") ||
+    siteName.value == "" ||
+    siteUrl.value == ""
+  ) {
+    layer.classList.replace("d-none", "d-flex");
+  } else addSite();
+});

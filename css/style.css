@@ -101,3 +101,25 @@ th {
   font-size: var(--PT-Sans-Caption-font-size);
   color: white;
 }
+
+
+.w-35{
+  width: 35%;
+}
+
+.h-35{
+  height: 35%;
+}
+
+.circle-id{
+  width: 20px;
+  height: 20px;
+}
+
+.closeBtn{
+  cursor: pointer;
+}
+
+.fa-arrow-right{
+  font-size: 10px;
+}
