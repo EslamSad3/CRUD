@@ -35,7 +35,8 @@ body {
 }
 
 .header::selection,
-.bg-select::selection {
+.bg-select::selection,
+.text-select::selection {
   background-color: var(--bg-header);
 }
 .header::before {
@@ -102,24 +103,23 @@ th {
   color: white;
 }
 
-
-.w-35{
+.w-35 {
   width: 35%;
 }
 
-.h-35{
+.h-35 {
   height: 35%;
 }
 
-.circle-id{
+.circle-id {
   width: 20px;
   height: 20px;
 }
 
-.closeBtn{
+.closeBtn {
   cursor: pointer;
 }
 
-.fa-arrow-right{
+.fa-arrow-right {
   font-size: 10px;
 }
